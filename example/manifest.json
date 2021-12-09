@@ -1,11 +1,19 @@
 {
   "background_color": "#ffffff",
+  "description": "DiceUI + Expo Example",
   "display": "standalone",
   "lang": "en",
-  "name": "my-app-demo",
-  "short_name": "my-app-demo",
+  "name": "dice-expo-demo",
+  "short_name": "dice-expo-demo",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "id": "com.dice.www"
+    }
+  ],
+  "prefer_related_applications": true,
   "icons": [
     {
       "src": "/dice/example/pwa/chrome-icon/chrome-icon-144.png",

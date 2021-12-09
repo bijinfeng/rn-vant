@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/dice/example/static/js/app.317d4174.chunk.js",
-    "app.js.map": "/dice/example/static/js/app.317d4174.chunk.js.map",
+    "app.js": "/dice/example/static/js/app.a47b4907.chunk.js",
+    "app.js.map": "/dice/example/static/js/app.a47b4907.chunk.js.map",
     "runtime~app.js": "/dice/example/static/js/runtime~app.1ac54353.js",
     "runtime~app.js.map": "/dice/example/static/js/runtime~app.1ac54353.js.map",
-    "static/js/2.f06cff34.chunk.js": "/dice/example/static/js/2.f06cff34.chunk.js",
-    "static/js/2.f06cff34.chunk.js.map": "/dice/example/static/js/2.f06cff34.chunk.js.map",
+    "static/js/2.0ccb499f.chunk.js": "/dice/example/static/js/2.0ccb499f.chunk.js",
+    "static/js/2.0ccb499f.chunk.js.map": "/dice/example/static/js/2.0ccb499f.chunk.js.map",
     "favicon-16.png": "/dice/example/favicon-16.png",
     "favicon-32.png": "/dice/example/favicon-32.png",
     "favicon.ico": "/dice/example/favicon.ico",
     "index.html": "/dice/example/index.html",
     "manifest.json": "/dice/example/manifest.json",
     "serve.json": "/dice/example/serve.json",
-    "static/js/2.f06cff34.chunk.js.LICENSE.txt": "/dice/example/static/js/2.f06cff34.chunk.js.LICENSE.txt"
+    "static/js/2.0ccb499f.chunk.js.LICENSE.txt": "/dice/example/static/js/2.0ccb499f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.1ac54353.js",
-    "static/js/2.f06cff34.chunk.js",
-    "static/js/app.317d4174.chunk.js"
+    "static/js/2.0ccb499f.chunk.js",
+    "static/js/app.a47b4907.chunk.js"
   ]
 }
