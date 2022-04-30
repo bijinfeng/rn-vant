@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@dice-ui/dumi-theme-vant": "^0.0.1",
-    "@types/color": "3.0.2",
+    "@types/color": "3.0.3",
     "@types/lodash-es": "4.17.6",
     "@types/react-native": "0.65.16",
     "dumi": "1.1.37",
