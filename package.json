@@ -25,7 +25,7 @@
     "@commitlint/cli": "13.2.0",
     "@youngjuning/eslint-config": "1.4.0",
     "@youngjuning/prettier-config": "1.0.0",
-    "babel-plugin-import": "1.13.3",
+    "babel-plugin-import": "1.13.5",
     "commitizen": "4.2.4",
 		"cz-conventional-changelog": "3.3.0",
     "eslint-plugin-import": "2.24.2",
