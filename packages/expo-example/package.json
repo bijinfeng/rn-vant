@@ -14,7 +14,7 @@
   },
   "homepage": "/dice/example/",
   "dependencies": {
-    "@expo/webpack-config": "0.16.19",
+    "@expo/webpack-config": "0.16.23",
     "@react-navigation/elements": "1.2.1",
     "@react-navigation/native": "6.0.6",
     "@react-navigation/stack": "6.0.11",
