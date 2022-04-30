@@ -22,7 +22,7 @@
     "versionup:prerelease": "yarn versionup --conventional-prerelease"
   },
   "devDependencies": {
-    "@commitlint/cli": "13.2.0",
+    "@commitlint/cli": "13.2.1",
     "@youngjuning/eslint-config": "1.4.0",
     "@youngjuning/prettier-config": "1.0.0",
     "babel-plugin-import": "1.13.3",
