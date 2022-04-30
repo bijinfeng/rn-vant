@@ -31,8 +31,8 @@
     "react-native-web": "0.17.7"
   },
   "devDependencies": {
-    "@babel/core": "7.16.0",
-    "@babel/plugin-proposal-export-namespace-from": "7.16.0",
+    "@babel/core": "7.17.10",
+    "@babel/plugin-proposal-export-namespace-from": "7.16.7",
     "@types/react": "17.0.44",
     "@types/react-native": "0.64.19",
     "expo-yarn-workspaces": "1.6.0",
