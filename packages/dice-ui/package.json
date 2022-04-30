@@ -31,7 +31,7 @@
     "@dice-ui/icons": "^0.2.0",
     "@gorhom/portal": "^1.0.12",
     "@ptomasroos/react-native-multi-slider": "^2.2.2",
-    "color": "^3.1.2",
+    "color": "^4.0.0",
     "lodash-es": "^4.17.21",
     "react-native-iphone-x-helper": "^1.3.1",
     "react-native-svg": "^12.1.1",
@@ -39,12 +39,12 @@
   },
   "devDependencies": {
     "@dice-ui/dumi-theme-vant": "^0.0.1",
-    "@types/color": "3.0.2",
+    "@types/color": "3.0.3",
     "@types/lodash-es": "4.17.6",
     "@types/react-native": "0.65.16",
-    "dumi": "1.1.37",
+    "dumi": "1.1.40",
     "react-native-builder-bob": "0.18.2",
-    "typescript": "4.4.3"
+    "typescript": "4.6.4"
   },
   "peerDependencies": {
     "react": "*",
