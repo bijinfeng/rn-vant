@@ -35,7 +35,7 @@
     "@babel/plugin-proposal-export-namespace-from": "7.16.0",
     "@types/react": "17.0.37",
     "@types/react-native": "0.64.19",
-    "expo-yarn-workspaces": "1.6.0",
+    "expo-yarn-workspaces": "1.7.0",
     "typescript": "4.3.5"
   },
   "expo-yarn-workspaces": {
