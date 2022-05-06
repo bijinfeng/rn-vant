@@ -3,16 +3,11 @@ import { View, ScrollView, Image, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link } from '@react-navigation/native';
 import { Icon } from 'dice-ui';
-import { routes, RouteItem } from '../navigation/routes';
-import { postMessage } from '../utils';
+import { routes } from '../navigation/routes';
 import { GlobalContext } from '../GlobalContext';
 
 const Home = () => {
   const { themeVars } = useContext(GlobalContext);
-
-  const onLinkPress = (item: RouteItem) => {
-    postMessage('navigate', item.href);
-  };
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -23,12 +18,7 @@ const Home = () => {
         </View>
         <View>
           {routes.map(item => (
-            <Link
-              style={styles.link}
-              key={item.href}
-              to={{ screen: item.href, params: {} }}
-              onPress={() => onLinkPress(item)}
-            >
+            <Link style={styles.link} key={item.href} to={{ screen: item.href, params: {} }}>
               <View style={[styles.item, { backgroundColor: themeVars.background_3 }]}>
                 <Text style={[styles.text, { color: themeVars.text_color_3 }]}>{item.name}</Text>
                 <Icon name="arrow" size={16} color="#B6C3D2" />

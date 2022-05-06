@@ -42,6 +42,7 @@
     "@types/color": "^3.0.2",
     "@types/lodash-es": "^4.17.6",
     "@types/react-native": "^0.65.5",
+    "@umijs/plugin-qiankun": "^2.37.2",
     "dumi": "^1.1.37",
     "react-native-builder-bob": "^0.18.2",
     "typescript": "^4.4.3"

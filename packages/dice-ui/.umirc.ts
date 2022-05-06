@@ -2,6 +2,7 @@ import { defineConfig, IConfig } from 'dumi';
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production' && process.env.PREVIEW_PR !== 'true';
+const demoUrl = isDev ? 'http://localhost:19006' : 'https://bijinfeng.github.io/dice/example';
 
 export default defineConfig({
   exportStatic: isProd ? {} : false,
@@ -14,8 +15,15 @@ export default defineConfig({
   },
   favicon: 'https://img01.yzcdn.cn/vant/logo.png',
   logo: 'https://img01.yzcdn.cn/vant/logo.png',
-  themeConfig: {
-    demoUrl: isDev ? 'http://localhost:19006' : 'https://bijinfeng.github.io/dice/example',
+  qiankun: {
+    master: {
+      apps: [
+        {
+          name: 'demo',
+          entry: demoUrl,
+        },
+      ],
+    },
   },
   navs: [
     null,
@@ -32,6 +40,6 @@ export default defineConfig({
   publicPath: isProd ? 'https://cdn.jsdelivr.net/gh/bijinfeng/dice@gh-pages/' : '/',
   sitemap: {
     hostname: 'https://bijinfeng.github.io/dice/',
-  }
+  },
   // more config: https://d.umijs.org/config
 } as IConfig);

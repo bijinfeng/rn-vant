@@ -1,27 +1,29 @@
-import React, { FC, useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { useColorScheme, StatusBar, View, ColorSchemeName } from 'react-native';
 import { ConfigProvider, defaultTheme, darkTheme } from 'dice-ui';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Navigation from './navigation';
-import { listenerMessage, listenerIframeLoaded } from './utils';
 import { lightTheme, darkTheme as darkThemeVars } from './style/vars';
 import { GlobalContext, GlobalState } from './GlobalContext';
 
-const Layout: FC = () => {
-  const [isReady, setReady] = useState(false);
-  const [themeMode, setThemeMode] = useState<ColorSchemeName>(useColorScheme());
+interface LayoutProps {
+  theme?: ColorSchemeName;
+  onThemeChange?: (theme: ColorSchemeName) => void;
+}
+
+const Layout = (props: LayoutProps): JSX.Element => {
+  const defaultThemeScahme = useColorScheme();
+  const { theme = defaultThemeScahme, onThemeChange } = props;
+  const [themeMode, setThemeMode] = useState<ColorSchemeName>(theme);
   const isDarkMode = themeMode === 'dark';
 
   useEffect(() => {
-    const { cancel } = listenerMessage('theme', (theme: ColorSchemeName) => {
-      setThemeMode(theme);
-    });
+    setThemeMode(theme);
+  }, [theme]);
 
-    listenerIframeLoaded().then(() => {
-      setReady(true);
-    });
-
-    return cancel;
+  const setTheme = useCallback((_theme: ColorSchemeName) => {
+    onThemeChange?.(_theme);
+    setThemeMode(theme);
   }, []);
 
   const globalState = useMemo<GlobalState>(
@@ -29,21 +31,20 @@ const Layout: FC = () => {
       themeMode,
       isDarkMode,
       themeVars: isDarkMode ? darkThemeVars : lightTheme,
+      setThemMode: setTheme,
     }),
-    [themeMode, isDarkMode]
+    [themeMode, isDarkMode, setTheme]
   );
 
   return (
     <GlobalContext.Provider value={globalState}>
       <SafeAreaProvider>
-        {isReady && (
-          <ConfigProvider theme={isDarkMode ? darkTheme : defaultTheme}>
-            <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-            <View style={{ flex: 1 }}>
-              <Navigation colorScheme={themeMode} />
-            </View>
-          </ConfigProvider>
-        )}
+        <ConfigProvider theme={isDarkMode ? darkTheme : defaultTheme}>
+          <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+          <View style={{ flex: 1 }}>
+            <Navigation colorScheme={themeMode} />
+          </View>
+        </ConfigProvider>
       </SafeAreaProvider>
     </GlobalContext.Provider>
   );

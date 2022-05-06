@@ -1,48 +1,25 @@
-import React, { FC, useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import clsx from 'clsx';
-import { iframeMessageSwap } from '../../utils';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { MicroApp } from 'umi';
 import './index.less';
 
-export interface SimulatorProps {
-  src: string;
-  path: string;
-}
+const Simulator = (): JSX.Element => {
+  const [fixed, setFiexed] = useState<boolean>(false);
 
-const Simulator: FC<SimulatorProps> = ({ src, path }) => {
-  const [windowHeight, setWindowHeight] = useState(0);
-  const [scrollTop, setScrollTop] = useState(0);
-
-  const simulatorStyle = useMemo(() => {
-    const height = Math.min(640, window.innerHeight - 90);
-    return {
-      height: `${height}px`,
-    };
-  }, [windowHeight]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScrollTop(window.scrollY);
-    });
-    window.addEventListener('resize', () => {
-      setWindowHeight(window.innerHeight);
-    });
+  const setTop = useCallback(() => {
+    setFiexed(window.scrollY > 60);
   }, []);
 
   useEffect(() => {
-    // 切换 iframe 内部的路径
-    iframeMessageSwap.postMessage('navigate', path);
-  }, [path]);
+    window.addEventListener('scroll', setTop);
+    return () => window.removeEventListener('scroll', setTop);
+  }, []);
 
   return (
-    <div className={clsx('van-doc-simulator', { 'van-doc-simulator-fixed': scrollTop > 60 })}>
-      <iframe
-        id="simulator"
-        ref={iframeMessageSwap.setRef}
-        title="vant-ui-iframe"
-        src={src}
-        style={simulatorStyle}
-        frameBorder="0"
-      />
+    <div className={clsx('van-doc-simulator', { 'van-doc-simulator-fixed': fixed })}>
+      <MicroApp name="demo" />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React, { FC, useContext } from 'react';
 import { context, Link, NavLink } from 'dumi/theme';
 import type { Location } from '../../interface';
 import SearchInput from '../SearchInput';
-import { useColor } from '../../hooks';
+import { globalContext } from '../../globalContext';
 import './index.less';
 
 export interface HeaderProps {
@@ -14,7 +14,7 @@ const sunIcon = 'https://b.yzcdn.cn/vant/light-theme.svg';
 const moonIcon = 'https://b.yzcdn.cn/vant/dark-theme.svg';
 
 const Header: FC<HeaderProps> = ({ location }) => {
-  const [color, setColor] = useColor();
+  const { theme, setTheme } = useContext(globalContext);
   const { base, config, nav: navItems, locale } = useContext(context);
   const firstDiffLocale = config?.locales.find(({ name }) => name !== locale);
 
@@ -64,10 +64,10 @@ const Header: FC<HeaderProps> = ({ location }) => {
               <a
                 className="van-doc-header__link"
                 target="_blank"
-                onClick={() => setColor(color === 'dark' ? 'light' : 'dark')}
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 aria-hidden="true"
               >
-                <img src={color === 'dark' ? sunIcon : moonIcon} alt={color} />
+                <img src={theme === 'dark' ? sunIcon : moonIcon} alt={theme} />
               </a>
             </li>
             {/* versions */}

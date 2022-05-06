@@ -1,7 +1,7 @@
 {
   "name": "expo-example",
   "version": "1.1.0",
-  "main": "__generated__/AppEntry.js",
+  "main": "AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -10,7 +10,8 @@
     "eject": "expo eject",
     "build:web": "expo build:web",
     "postinstall": "expo-yarn-workspaces postinstall",
-    "build:ios-simulator": "expo build:ios -t simulator"
+    "build:ios-simulator": "expo build:ios -t simulator",
+    "customize:web": "expo customize:web"
   },
   "homepage": "/dice/example/",
   "dependencies": {

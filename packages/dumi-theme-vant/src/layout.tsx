@@ -8,34 +8,33 @@ import Container from './components/Container';
 import Simulator from './components/Simulator';
 import { Renderer } from './pages';
 
-import { useMeta, useThemeConfig, useHandleIframePost } from './hooks';
+import { useMeta } from './hooks';
+import { GlobalContextProvider } from './globalContext';
 import './style/layout.less';
 
 const Layout: FC<IRouteComponentProps> = ({ children, location }) => {
   const { meta } = useContext(context);
-  const { title, desc, demo } = useMeta();
-  const { demoUrl } = useThemeConfig();
+  const { title, desc } = useMeta();
 
   const showSideMenu = meta.sidemenu !== false;
-  const hasSimulator = !!demoUrl && !!demo;
-
-  useHandleIframePost();
 
   return (
-    <div className="vant-doc">
-      <Header location={location} />
+    <GlobalContextProvider>
+      <div className="vant-doc">
+        <Header location={location} />
 
-      {/* 侧边栏 */}
-      {showSideMenu && <SideMenu />}
+        {/* 侧边栏 */}
+        {showSideMenu && <SideMenu />}
 
-      <Container hasSimulator={hasSimulator}>
-        <Renderer title={title} desc={desc}>
-          {children}
-        </Renderer>
-      </Container>
+        <Container hasSimulator>
+          <Renderer title={title} desc={desc}>
+            {children}
+          </Renderer>
+        </Container>
 
-      {hasSimulator && <Simulator src={demoUrl} path={demo} />}
-    </div>
+        <Simulator />
+      </div>
+    </GlobalContextProvider>
   );
 };
 

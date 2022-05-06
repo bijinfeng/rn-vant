@@ -9,6 +9,8 @@
   overflow: hidden;
   background: var(--van-doc-background-2);
   border-radius: var(--van-doc-border-radius);
+  min-height: 640px;
+  height: calc(100vh - 90px);
 
   @media (max-width: 1100px) {
     right: auto;
@@ -25,8 +27,11 @@
     top: var(--van-doc-padding);
   }
 
-  iframe {
-    display: block;
-    width: 100%;
+  > div {
+    height: 100%;
+
+    > div {
+      height: 100%;
+    }
   }
 }
