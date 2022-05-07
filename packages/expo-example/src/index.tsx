@@ -7,13 +7,14 @@ import { lightTheme, darkTheme as darkThemeVars } from './style/vars';
 import { GlobalContext, GlobalState } from './GlobalContext';
 
 interface LayoutProps {
+  base?: string;
   theme?: ColorSchemeName;
   onThemeChange?: (theme: ColorSchemeName) => void;
 }
 
 const Layout = (props: LayoutProps): JSX.Element => {
   const defaultThemeScahme = useColorScheme();
-  const { theme = defaultThemeScahme, onThemeChange } = props;
+  const { theme = defaultThemeScahme, base = '/', onThemeChange } = props;
   const [themeMode, setThemeMode] = useState<ColorSchemeName>(theme);
   const isDarkMode = themeMode === 'dark';
 
@@ -28,12 +29,13 @@ const Layout = (props: LayoutProps): JSX.Element => {
 
   const globalState = useMemo<GlobalState>(
     () => ({
+      base,
       themeMode,
       isDarkMode,
       themeVars: isDarkMode ? darkThemeVars : lightTheme,
       setThemMode: setTheme,
     }),
-    [themeMode, isDarkMode, setTheme]
+    [themeMode, isDarkMode, setTheme, base]
   );
 
   return (

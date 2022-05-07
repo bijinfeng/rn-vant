@@ -3,6 +3,7 @@ import { ColorSchemeName } from 'react-native';
 import { lightTheme } from './style/vars';
 
 export interface GlobalState {
+  base: string;
   themeMode: ColorSchemeName;
   isDarkMode: boolean;
   themeVars: typeof lightTheme;

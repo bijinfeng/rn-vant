@@ -1,24 +1,20 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import * as Linking from 'expo-linking';
 import { ColorSchemeName, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { HeaderBackButton } from '@react-navigation/elements';
 import { createStackNavigator } from '@react-navigation/stack';
-import { routes } from './routes';
 import { DarkTheme, LightTheme } from './navigationTheme';
+import { useRoutes } from '../hooks/useRoutes';
 
 import Home from '../pages/index';
 
 const Stack = createStackNavigator();
 const prefix = Linking.createURL('/');
 
-const screens = routes.reduce<Record<string, string>>((result, it) => {
-  // eslint-disable-next-line no-param-reassign
-  result[it.href] = it.href;
-  return result;
-}, {});
-
 const StackNavigator = () => {
+  const routes = useRoutes();
+
   return (
     <Stack.Navigator>
       <Stack.Screen name="/" component={Home} options={{ headerShown: false, title: '首页' }} />
@@ -40,22 +36,33 @@ const StackNavigator = () => {
   );
 };
 
-const Navigation: FC<{ colorScheme: ColorSchemeName }> = ({ colorScheme }) => (
-  <NavigationContainer
-    theme={colorScheme === 'dark' ? DarkTheme : LightTheme}
-    fallback={<Text>Loading...</Text>}
-    linking={{
-      prefixes: [prefix],
-      config: {
-        screens: {
-          '/': '/',
-          ...screens,
+const Navigation: FC<{ colorScheme: ColorSchemeName }> = ({ colorScheme }) => {
+  const routes = useRoutes();
+  const screens = useMemo(() => {
+    return routes.reduce<Record<string, string>>((result, it) => {
+      // eslint-disable-next-line no-param-reassign
+      result[it.href] = it.href;
+      return result;
+    }, {});
+  }, [routes]);
+
+  return (
+    <NavigationContainer
+      theme={colorScheme === 'dark' ? DarkTheme : LightTheme}
+      fallback={<Text>Loading...</Text>}
+      linking={{
+        prefixes: [prefix],
+        config: {
+          screens: {
+            '/': '/',
+            ...screens,
+          },
         },
-      },
-    }}
-  >
-    <StackNavigator />
-  </NavigationContainer>
-);
+      }}
+    >
+      <StackNavigator />
+    </NavigationContainer>
+  );
+};
 
 export default Navigation;

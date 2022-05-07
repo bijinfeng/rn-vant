@@ -3,6 +3,7 @@ import { defineConfig, IConfig } from 'dumi';
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production' && process.env.PREVIEW_PR !== 'true';
 const demoUrl = isDev ? 'http://localhost:19006' : 'https://bijinfeng.github.io/dice/example';
+const base = isProd ? '/dice/' : '/';
 
 export default defineConfig({
   exportStatic: isProd ? {} : false,
@@ -15,6 +16,9 @@ export default defineConfig({
   },
   favicon: 'https://img01.yzcdn.cn/vant/logo.png',
   logo: 'https://img01.yzcdn.cn/vant/logo.png',
+  themeConfig: {
+    base,
+  },
   qiankun: {
     master: {
       apps: [
@@ -36,7 +40,7 @@ export default defineConfig({
     passivePreview: true,
   },
   hash: isProd,
-  base: isProd ? '/dice/' : '/',
+  base,
   publicPath: isProd ? 'https://cdn.jsdelivr.net/gh/bijinfeng/dice@gh-pages/' : '/',
   sitemap: {
     hostname: 'https://bijinfeng.github.io/dice/',

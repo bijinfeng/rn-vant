@@ -3,10 +3,11 @@ import { View, ScrollView, Image, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link } from '@react-navigation/native';
 import { Icon } from 'dice-ui';
-import { routes } from '../navigation/routes';
 import { GlobalContext } from '../GlobalContext';
+import { useRoutes } from '../hooks/useRoutes';
 
 const Home = () => {
+  const routes = useRoutes();
   const { themeVars } = useContext(GlobalContext);
 
   return (

@@ -18,11 +18,13 @@ if (!inQiankun) {
 // 微应用配置
 export function AppContainer(props) {
   const [theme, setTheme] = React.useState();
+  const [base, setBase] = React.useState('/');
   const cacheState = React.useRef();
 
   React.useEffect(() => {
     props.onGlobalStateChange(state => {
       setTheme(state.theme);
+      setBase(state.base);
       cacheState.current = state;
     }, true);
   }, []);
@@ -35,7 +37,7 @@ export function AppContainer(props) {
     });
   }, []);
 
-  return <App theme={theme} onThemeChange={onThemeChange} />;
+  return <App theme={theme} base={base} onThemeChange={onThemeChange} />;
 }
 
 function render(props) {
