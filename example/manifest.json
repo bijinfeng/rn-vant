@@ -1,10 +1,10 @@
 {
   "background_color": "#ffffff",
-  "description": "DiceUI + Expo Example",
+  "description": "Rn Vant + Expo Example",
   "display": "standalone",
   "lang": "en",
-  "name": "dice-expo-demo",
-  "short_name": "dice-expo-demo",
+  "name": "rn-vant-expo-demo",
+  "short_name": "rn-vant-expo-demo",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "related_applications": [
@@ -16,17 +16,17 @@
   "prefer_related_applications": true,
   "icons": [
     {
-      "src": "/dice/example/pwa/chrome-icon/chrome-icon-144.png",
+      "src": "/rn-vant/example/pwa/chrome-icon/chrome-icon-144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/dice/example/pwa/chrome-icon/chrome-icon-192.png",
+      "src": "/rn-vant/example/pwa/chrome-icon/chrome-icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/dice/example/pwa/chrome-icon/chrome-icon-512.png",
+      "src": "/rn-vant/example/pwa/chrome-icon/chrome-icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
