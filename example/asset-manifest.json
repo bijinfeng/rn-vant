@@ -4,19 +4,19 @@
     "app.js.map": "/dice/example/static/js/app.adf8d36c.chunk.js.map",
     "runtime~app.js": "/dice/example/static/js/runtime~app.1ac54353.js",
     "runtime~app.js.map": "/dice/example/static/js/runtime~app.1ac54353.js.map",
-    "static/js/2.ba03d3ec.chunk.js": "/dice/example/static/js/2.ba03d3ec.chunk.js",
-    "static/js/2.ba03d3ec.chunk.js.map": "/dice/example/static/js/2.ba03d3ec.chunk.js.map",
+    "static/js/2.40ba091e.chunk.js": "/dice/example/static/js/2.40ba091e.chunk.js",
+    "static/js/2.40ba091e.chunk.js.map": "/dice/example/static/js/2.40ba091e.chunk.js.map",
     "favicon-16.png": "/dice/example/favicon-16.png",
     "favicon-32.png": "/dice/example/favicon-32.png",
     "favicon.ico": "/dice/example/favicon.ico",
     "index.html": "/dice/example/index.html",
     "manifest.json": "/dice/example/manifest.json",
     "serve.json": "/dice/example/serve.json",
-    "static/js/2.ba03d3ec.chunk.js.LICENSE.txt": "/dice/example/static/js/2.ba03d3ec.chunk.js.LICENSE.txt"
+    "static/js/2.40ba091e.chunk.js.LICENSE.txt": "/dice/example/static/js/2.40ba091e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.1ac54353.js",
-    "static/js/2.ba03d3ec.chunk.js",
+    "static/js/2.40ba091e.chunk.js",
     "static/js/app.adf8d36c.chunk.js"
   ]
 }
