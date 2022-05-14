@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/rn-vant/example/static/js/app.30485f98.chunk.js",
-    "app.js.map": "/rn-vant/example/static/js/app.30485f98.chunk.js.map",
+    "app.js": "/rn-vant/example/static/js/app.672ddaec.chunk.js",
+    "app.js.map": "/rn-vant/example/static/js/app.672ddaec.chunk.js.map",
     "runtime~app.js": "/rn-vant/example/static/js/runtime~app.b9781f1e.js",
     "runtime~app.js.map": "/rn-vant/example/static/js/runtime~app.b9781f1e.js.map",
     "static/js/2.94a6d64d.chunk.js": "/rn-vant/example/static/js/2.94a6d64d.chunk.js",
@@ -17,6 +17,6 @@
   "entrypoints": [
     "static/js/runtime~app.b9781f1e.js",
     "static/js/2.94a6d64d.chunk.js",
-    "static/js/app.30485f98.chunk.js"
+    "static/js/app.672ddaec.chunk.js"
   ]
 }
