@@ -4,19 +4,19 @@
     "app.js.map": "/rn-vant/example/static/js/app.672ddaec.chunk.js.map",
     "runtime~app.js": "/rn-vant/example/static/js/runtime~app.b9781f1e.js",
     "runtime~app.js.map": "/rn-vant/example/static/js/runtime~app.b9781f1e.js.map",
-    "static/js/2.94a6d64d.chunk.js": "/rn-vant/example/static/js/2.94a6d64d.chunk.js",
-    "static/js/2.94a6d64d.chunk.js.map": "/rn-vant/example/static/js/2.94a6d64d.chunk.js.map",
+    "static/js/2.d999388a.chunk.js": "/rn-vant/example/static/js/2.d999388a.chunk.js",
+    "static/js/2.d999388a.chunk.js.map": "/rn-vant/example/static/js/2.d999388a.chunk.js.map",
     "favicon-16.png": "/rn-vant/example/favicon-16.png",
     "favicon-32.png": "/rn-vant/example/favicon-32.png",
     "favicon.ico": "/rn-vant/example/favicon.ico",
     "index.html": "/rn-vant/example/index.html",
     "manifest.json": "/rn-vant/example/manifest.json",
     "serve.json": "/rn-vant/example/serve.json",
-    "static/js/2.94a6d64d.chunk.js.LICENSE.txt": "/rn-vant/example/static/js/2.94a6d64d.chunk.js.LICENSE.txt"
+    "static/js/2.d999388a.chunk.js.LICENSE.txt": "/rn-vant/example/static/js/2.d999388a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.b9781f1e.js",
-    "static/js/2.94a6d64d.chunk.js",
+    "static/js/2.d999388a.chunk.js",
     "static/js/app.672ddaec.chunk.js"
   ]
 }
