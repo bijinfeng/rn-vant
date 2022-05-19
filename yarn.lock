@@ -4022,10 +4022,10 @@
     regenerator-runtime "0.13.5"
     schema-utils "^3.0.0"
 
-"@umijs/preset-dumi@1.1.37":
-  version "1.1.37"
-  resolved "https://registry.npmjs.org/@umijs/preset-dumi/-/preset-dumi-1.1.37.tgz#195f7ab812c493d479c606329bf43827ebc33218"
-  integrity sha512-DiRSZ0rtYY1JA4RHD7tfRN5sgvbt71nTMIYASwGFFqOWAUz1TP9LMUXMh0QTcmCjYpYt98lQsVX1S+BOkRifVA==
+"@umijs/preset-dumi@1.1.42":
+  version "1.1.42"
+  resolved "https://registry.npmjs.org/@umijs/preset-dumi/-/preset-dumi-1.1.42.tgz#e443a14a81118436c37df7093d58886bab462163"
+  integrity sha512-1YODNEN0HTD2fE6kkRT/sJtmLF5Frp6KClE0oOtD+Izmov95ZwjhPXPj4bVdzsMxCNhJmh83r06uaPKeIgTAAg==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/generator" "^7.7.2"
@@ -4041,7 +4041,7 @@
     copy-text-to-clipboard "^2.2.0"
     deepmerge "^4.2.2"
     dumi-assets-types "1.0.0"
-    dumi-theme-default "1.1.20"
+    dumi-theme-default "1.1.21"
     enhanced-resolve "^4.1.1"
     github-slugger "^1.3.0"
     hast-util-has-property "^1.0.4"
@@ -7237,10 +7237,10 @@ dumi-assets-types@1.0.0:
   resolved "https://registry.yarnpkg.com/dumi-assets-types/-/dumi-assets-types-1.0.0.tgz#d5368cb11045b203bf1ef1080e553b2287a2ec81"
   integrity sha512-7nhSeWM15vybbUAMPLZsdls2jKoHB2UU4P1RM6kLPucuS8eC/HSmufquFqTTYtX4oIDLHGtil/dVtMreNGwhdA==
 
-dumi-theme-default@1.1.20:
-  version "1.1.20"
-  resolved "https://registry.npmjs.org/dumi-theme-default/-/dumi-theme-default-1.1.20.tgz#53bb44fa8b14d97a840ef9f9833f960e54c8ddaf"
-  integrity sha512-p6XuHQXpRmofD/TC59VvIMeC+6FMvdl9xb6X1cWtoLta1oH7lvSt1/4WPS8yRcsKMcWXM2Z1BSVMrztjCiTyvw==
+dumi-theme-default@1.1.21:
+  version "1.1.21"
+  resolved "https://registry.npmjs.org/dumi-theme-default/-/dumi-theme-default-1.1.21.tgz#2dce486ea4f7b76b9ad1d8b3ccdbdefafd3f67f7"
+  integrity sha512-lh3lV9GnfJhh48Sb9YMlnSBd3da8O/Qs9QfbnoQI+9paDp5P5hLO9O+UJB8skojSSzdxsXiW6VALoHgBC8NGow==
   dependencies:
     lodash.throttle "^4.1.1"
     prism-react-renderer "^1.1.1"
@@ -7249,12 +7249,12 @@ dumi-theme-default@1.1.20:
     rc-tabs "^11.7.1"
     rc-tree "^5.2.0"
 
-dumi@^1.1.37:
-  version "1.1.37"
-  resolved "https://registry.npmjs.org/dumi/-/dumi-1.1.37.tgz#3435e0b1742c4ff3c2453b1ccb41f97ad12f63cc"
-  integrity sha512-ph34F/PVKxd5KQsEvx5jLa6PmX+7wIRO60WkSi5LS030ZoAlapUyggP4YsWEHlhaBi1SZk7lD3dZvwJpv0DAKg==
+dumi@1.1.42:
+  version "1.1.42"
+  resolved "https://registry.npmjs.org/dumi/-/dumi-1.1.42.tgz#e5b205ac2fc9657f6d7bb2330349c02f7785a13a"
+  integrity sha512-zOcuEv696WaoTkZFUvUAD9Ig3v3lXS1GvD8dEgUNXmd0gi6sEgEwTEjk+r3MXa3GeNgi1XBHy6S/zLfTs1YSuw==
   dependencies:
-    "@umijs/preset-dumi" "1.1.37"
+    "@umijs/preset-dumi" "1.1.42"
     umi "^3.0.0"
 
 duplexer@^0.1.1:
